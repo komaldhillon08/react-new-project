@@ -1,11 +1,11 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 export default function Navbar() {
   return (
     <>
       <nav>
-        <div className="navbar flex items-center h-16 mb-8 border-2 px-4">
+        <div className="navbar flex items-center h-16 mb-8 border-2 ">
           <div className="logo text-4xl w-1/2 font-bold text-indigo-950">
             <Link to="/">Logo</Link>
           </div>
@@ -14,7 +14,7 @@ export default function Navbar() {
               <li><Link to="/home">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/content">Contact Us</Link></li>
-              <li><Link to="/shopping">Shopping Zone</Link></li>
+              <li><Link to="/shopping">Food Zone</Link></li>
               <li><Link to="/todo">Todo</Link></li>
               <li><Link to="/images">Images</Link></li>
               <li>
@@ -27,8 +27,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* 👇 this is where nested pages render */}
-      <Outlet />
+     
     </>
   );
 }
