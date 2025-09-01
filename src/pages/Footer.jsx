@@ -10,10 +10,10 @@ export default function Footer() {
           </div>
           <div className="links w-1/2">
             <ul className="flex justify-evenly items-center text-lg text-indigo-950">
-              <li><Link to="http://facrbook.com">Facebool</Link></li>
-              <li><Link to="http://instagram.com/kalamdhillon">Instalink</Link></li>
-            
+              <li><Link to="http://facrbook.com">Facebook</Link></li>
+              <li><Link to="http://instagram.com/kamaldhillon_08" target="_blank">Instagram</Link></li>
               
+            
             </ul>
           </div>
         </div>
