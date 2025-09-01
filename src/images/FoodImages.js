@@ -43,4 +43,47 @@ export const FoodImages = [
         price : "4.5",
         path : food5
     },
+     {
+        id : "6" ,
+        name : "six",
+        price : "8.5",
+        path : food6
+    },
+     {
+        id : "7" ,
+        name : "five",
+        price : "5",
+        path : food7
+    },
+     {
+        id : "8" ,
+        name : "five",
+        price : "1.5",
+        path : food8
+    },
+     {
+        id : "9" ,
+        name : "five",
+        price : "0.5",
+        path : food9
+    },
+     {
+        id : "10" ,
+        name : "five",
+        price : "0.75",
+        path : food10
+    },
+     {
+        id : "11" ,
+        name : "five",
+        price : "1.5",
+        path : food11
+    },
+     {
+        id : "12" ,
+        name : "five",
+        price : "1.5",
+        path : food12
+    },
+     
 ]
