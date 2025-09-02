@@ -6,19 +6,22 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Todo from "./pages/Todo.jsx";
 import FoodZone from "./pages/Food.jsx";
 import Images from "./pages/Images.jsx";
+// import CartContextProvider from "./pages/store/CartContxt.js";
+
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayOut />,   
+    element: <MainLayOut />,
     children: [
-      { index: true, element: <Home /> },  
+      { index: true, element: <Home /> },
       { path: "home", element: <Home /> },
       { path: "about", element: <About /> },
-      { path: "content" , element: <ContentUs/>},
-      { path: "todo" , element: <Todo/>},
-      { path: "images" , element: <Images/>},
-      {path: "shopping" , element : <FoodZone/>}
+      { path: "content", element: <ContentUs /> },
+      { path: "todo", element: <Todo /> },
+      { path: "images", element: <Images /> },
+      { path: "shopping", element: <FoodZone /> },
     ],
   },
 ]);
@@ -26,7 +29,10 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="container mx-auto">
-      <RouterProvider router={router} />
+      {/* 👇 wrap entire router inside CartContextProvider */}
+     {/* <CartContextProvider> */}
+        <RouterProvider router={router} />
+     {/* </CartContextProvider> */}
     </div>
   );
 }

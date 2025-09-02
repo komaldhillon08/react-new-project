@@ -1,8 +1,17 @@
 
 import { FoodImages } from "../images/FoodImages";
 import Button from "../components/Button";
+import { useContext } from "react"; 
+import { CartContext } from "./store/CartContxt";
+
 
 export default function FoodZone() {
+  // const cartCtx = useContext(CartContext)
+
+ /*  function handleAddMealToCart() {
+        cartCtx.addItem(meal);
+    }
+   */
   return (
     <>
       <section className="py-10">
@@ -10,7 +19,11 @@ export default function FoodZone() {
          <h2 className="text-3xl font-bold text-indigo-950 mb-8 text-center">
           Food Zone
         </h2>
-          <button className="text-2xl font-bold text-indigo-950 mb-8  border-2 px-5 py-1 rounded-2xl cursor-pointer ">Cart(0)</button>
+          <button className="text-2xl font-bold text-indigo-950 mb-8  border-2 px-5 py-1 rounded-2xl cursor-pointer ">
+            {/* CartCart ({cartCtx.items.reduce((total, item) => total + item.quantity, 0)}) */}
+            cart (0)
+            
+          </button>
         
        </div>
 
@@ -33,6 +46,9 @@ export default function FoodZone() {
               <p className="text-lg font-medium text-gray-700 mb-4">
                 ${foodImg.price}
               </p>
+              {/* <Button onclick={() => cartCtx.addItem(foodImg)} >
+                Add to Cart
+              </Button> */}
               <Button>
                 Add to Cart
               </Button>
