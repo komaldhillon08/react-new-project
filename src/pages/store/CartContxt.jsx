@@ -40,43 +40,21 @@
     return state;
     }
 
-   /*  // Provider
-    export default function CartContextProvider({ children }) {
-    const [cart, dispatchAction] = useReducer(cartReducer, { items: [] });
+ 
 
-    function addItem(item) {
-        dispatchAction({ type: "addItem", item });
-    }
-
-    function removeItem(id) {
-        dispatchAction({ type: "removeItem", id });
-    }
-
-    const cartContext = {
-        items: cart.items,
-        addItem,
-        removeItem,
-    };
-
-    return (
-        <CartContext.Provider value={cartContext}>
-            {children}  ✅
-        </CartContext.Provider>
-    );
-    }
- */
 export default function CartContextProvider({ children }) {
   const [cart, dispatchAction] = useReducer(cartReducer, { items: [] });
 
   const cartContext = {
     items: cart.items,
-    addItem: (item) => dispatchAction({ type: "ADD_ITEM", item }),
-    removeItem: (id) => dispatchAction({ type: "REMOVE_ITEM", id }),
+    addItem : (item) => dispatchAction({ type: "ADD_ITEM", item }),
+    removeItem : (id) => dispatchAction({ type: "REMOVE_ITEM", id }),
   };
 
- /*  return (
+  return (
     <CartContext.Provider value={cartContext}>
       {children}
     </CartContext.Provider>
-  ); */
+  );
 }
+

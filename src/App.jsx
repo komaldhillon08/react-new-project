@@ -9,7 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Todo from "./pages/Todo.jsx";
 import FoodZone from "./pages/Food.jsx";
 import Images from "./pages/Images.jsx";
-// import CartContextProvider from "./pages/store/CartContxt.js";
+import CartContextProvider from "./pages/store/CartContxt.jsx";
 
 
 
@@ -33,9 +33,9 @@ function App() {
   return (
     <div className="container mx-auto">
       {/* 👇 wrap entire router inside CartContextProvider */}
-     {/* <CartContextProvider> */}
+     <CartContextProvider>
         <RouterProvider router={router} />
-     {/* </CartContextProvider> */}
+     </CartContextProvider>
     </div>
   );
 }
